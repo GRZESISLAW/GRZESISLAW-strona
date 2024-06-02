@@ -3,24 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRZESISŁAW SPOTTER</title>
+    <title>GRZESISLAW SPOTTER</title>
     <style>
         body {
-            background-color: #333;
-            color: #fff; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2e2e2e;
+            color: #ddd;
         }
-        h1 {
-            font-size: 2em;
+
+        header {
+            background: #1a1a1a;
+            color: #ddd;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #cc0000;
+        }
+
+        .hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        section {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #cc0000;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .gallery-container figure {
+            margin: 0;
+        }
+
+        .gallery-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+            border-color: #cc0000;
+        }
+
+        .gallery-container figcaption {
+            text-align: center;
+            margin-top: 0.5rem;
+            color: #ddd;
+        }
+
+        .youtube-button {
+            display: block;
+            width: fit-content;
+            margin: 1rem auto;
+            padding: 0.5rem 1rem;
+            background-color: #cc0000;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .youtube-button:hover {
+            background-color: #e60000;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <h1>the site is under maintenance</h1>
+    <header>
+        <h1>GRZESISLAW SPOTTER</h1>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to GRZESISLAW SPOTTER's Website</h2>
+            <p>A place to see some planespotting shots and get inspired.</p>
+            <a href="https://www.youtube.com/@grzesislawgaming" class="youtube-button" target="_blank">My YouTube Channel</a>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery - My best shots</h2>
+        <div class="gallery-container">
+            <figure>
+                <img src="DSC_0255.jpg" alt="Plane 1">
+                <figcaption>(EPPO) LOT Polish Airlines Embraer 175</figcaption>
+            </figure>
+            <figure>
+                <img src="DSC_0022.jpg" alt="Plane 2">
+                <figcaption>(EPPO) Lufthansa Airbus A319</figcaption>
+            </figure>
+            <figure>
+                <img src="DSC_1161.jpg" alt="Plane 3">
+                <figcaption>(EPPO) SkyLine Express Boeing 757</figcaption>
+            </figure>
+            <figure>
+                <img src="DSC_0410.jpg" alt="Plane 4">
+                <figcaption>(EPPO) Wizzair Airbus A321 NEO</figcaption>
+            </figure>
+            <figure>
+                <img src="DSC_1152.jpg" alt="Plane 5">
+                <figcaption>(EPPO) Omni Air International Boeing 777 next to Ryanair 737 MAX</figcaption>
+            </figure>
+            <!-- More images as needed -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('PlaneSpotting Blog Loaded!');
+        });
+    </script>
 </body>
 </html>
+
